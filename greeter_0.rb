@@ -1,16 +1,25 @@
 class Greeter
 
-  def initialize(day, minutes, hour)
-  @day = day
-  @minutes= minutes
-  @hour = hour
+  def aktualny_czas
+  
+    dzień = Time.now.day
+    miesiąc = Time.now.month
+    minuta = Time.now.min
+    godzina = Time.now.hour
+     puts "Dzień dobry! Dzisiaj jest #{dzień}.#{miesiąc}., #{minuta} minut po godzinie #{godzina}."
   end
 
   def say
-  puts "Dzień dobry! Dzisiaj jest #{@day}, #{@minutes} minut po godzinie #{@hour}."
+      
+      minuta = Time.now.min
+      godzina = Time.now.hour
+  puts "Dzień dobry! Dzisiaj jest sobota, #{minuta} minut po godzinie #{godzina}."
   end
 
 end
 
-greeter = Greeter.new("wtorek", 10, 22)
-greeter.say
+greeter = Greeter.new
+
+ puts greeter.aktualny_czas
+ 
+ puts greeter.say
